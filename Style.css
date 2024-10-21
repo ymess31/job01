@@ -1,0 +1,184 @@
+@media screen and (min-width:980px){
+    section{
+        width: 55%;
+        box-shadow: 0px 0px 10px #bbb;
+    } /*crée des cases et les souligne par des ombrages. media screen me dit que cette règle s'applique aux pc*/
+}
+a:hover{
+    color: rgb(255, 0, 242); /* a pas l'air de marcher, je m'attendais à un changement de couleur. Correct : marche totalement bien. Mes liens sont bien roses quand je passe dessus.*/
+}
+header h1{
+    width:80%; /*edit sisi c'est bon*/
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 5px red; /*ombre rouge sur mon texte. si apx bpx et cpx, alors a = ombre horizontale, b = ombre verticale et c= graisse ?.*/
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.infoperso, .form{
+    flex: 1 0 15%;/*ne grossit pas, ne réduit pas en taille (selon l'espace dispo à l'écran), flex basis= "je veux que les éléments prennent x% du container*/
+
+}
+
+.infoperso{
+    border-bottom: none;
+    border-right: 2px solid #ccc;
+    padding-right: 20px;
+    margin-left: 3em ;
+    padding-bottom: 20px;
+} /* centre les éléments */
+
+.form{
+    padding-left: 20px; /*marge gauche*/
+    padding-right: 20px;
+    margin-right: 10px; /* marge droite*/
+    padding-bottom: 20px;
+}
+
+.infoperso a{
+    border: 5px solid transparent
+}
+
+.inforperso a:hover{
+    color: #f28835;
+    background-color: #fff;
+    border: 1px solid #f28835;
+    box-shadow: 0px 0px 10px #666;
+}
+
+/*Police d'écriture, change */
+
+*{
+    margin: 0; /* ces trois lignes sont très souvent utilisées : les mettre par défaut à l'avenir*/
+    padding: 0;
+    list-style-type: none;
+
+    font-family: 'Futura', sans-serif;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+
+/*background*/
+
+body{
+    background: #ededed;
+    
+    
+}
+
+p{
+    font-size: 1em; 
+    line-height: 1.5em;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+li{
+    margin:15px;
+
+}
+
+/*HEADER & FOOTER*/
+header, footer{
+    width: 100%;
+    padding: 2em;
+    background-image: url("images/pp.jpg");
+    background-size: cover;
+    box-shadow: 0px 0px 15px #333;
+}
+
+/*SECTIONS*/
+section{
+    display: flex;
+    
+    flex-flow: row wrap; /*détermine la direction de mon flex et son "vrapping behavior"*/
+    justify-content: center;
+    width:97%;
+    padding-bottom: 0px;
+    margin: 20px 20px;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+    
+    
+}
+
+section h2{
+    margin: 20px 0;
+    width: 90%;
+}
+
+span{
+    font-weight:600
+}
+
+.skill{
+    width:40px;
+    height:40px;
+    position: relative;
+}
+
+.skills::before{ /*this is a pseudo-class. ça renvoit à des propriétés CSS assignées à toutes les baises qui correspondent à la classe skills.*/
+    content:"";/*quand on crée une pseudo classe, obligatoire de mettre un contenant*/
+    position:absolute;
+    background-image: url("images/ya hmar.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+    
+}
+
+/*le but ici était de placer une image dans le background et de la rendre moins opaque SANS affecter l'opacité des logos et du texte
+C'était pas facile et pas donné. 
+La background image a été placée dans un élément enfant de skills via la fonction ::before
+Comme sur photoshop, ça met l'image sur un "calque" différent (désolé moi, j'ai pas de meilleure métaphore)
+Car comme sur des calques PS, je peux affecter l'opacité de l'un sans toucher aux autres éléments!
+
+Je dois m'assurer qu'un contenant existe pour placer ce calque d'où content :""
+Je dois aussi m'assurer que la position de l'élement enfant corresponde à celle du parent
+d'où la position absolue dans le ::before
+et les valeurs du top right bottom et left à zéro
+
+Pour les éléments à ne pas rendre opaque, leur position doit être relative.
+Dans la classe "opak" crée à cet effet, les éléments sont en position relative pour être devant le pseudo élément et la background image
+Skills doit aussi être en relatif*/
+
+.skills{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.opak{
+    position:relative;
+}
+
+.photo{
+    
+    height: fit-content;
+    opacity: 0.5;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css"> <!--Stylesheet permet de dire que c'est un fichier pour rendre son site plus joli. Style.css c'est le nom du futur fichier où je vais coder en CSS-->
+        <meta name="description" content="Le CV de votre futur alternant en informatique (python, R)"> <!--Pour le SEO-->
+        <title>CV de Yannis MESSADIA</title> <!--J'ai lu sur le net que ce sont les éléments mis dans le titre qui sont utilisés en priorité pour le SEO, d'où ces "tags"-->
+    </head>
+    <body>
+        
+        <header>
+            <h1>CV de Yannis MESSADIA</h1> <!--le chiffre après h détermine la taille de mon titre + check balise main-->
+        </header>
+        <main>
+        <section> <!--Détermine la première section de la présentation de mon CV-->
+            <div class ="infoperso"> <!-- Permet d'appliquer un style-->
+                <h2>Informations personnelles</h2>
+                    <p>0761377172</p>
+                    <p>yannis.messadia@gmail.com | yannis.messadia@laplateforme.io</p>
+                    <p>29 rue Thubaneau, 130001 Marseille</p>
+                <h2>Objectif Personnel</h2>
+                    <p>Développer des compétences techniques de pointe en informatique et spécifiquement dans le domaine de l'IA. </p>
+            </div> <!-- la logique était de créer une section dédiée à mes informations personnelles. div permet de diviser son body -->
+            <div class ="form"> <!-- Dans mon esprit, les expériences Pro et les études auraient un style similaire : j'applique la même classe + éviter les majuscules-->
+                <h2>Expérience Professionnelle</h2>
+                <ul><!--Crée une liste non ordonnée. Si je veux ordonner = ol. si je veux commencer ailleurs dans ma liste ol start "4", en chiffre romain ol type = "i" -->
+                    <li><span>DOCTORANT CIFRE-DGA en Neurosciences appliquées à l'Interaction Homme Machine</span> à l'ONERA</li>
+                    <li><span>Ingénieur de recherche</span> chez Airudit</li>
+                    <li><span>Stagiaire Ingénieur d'études en Ergonomie Cognitive</span> au Laboratoire d'Etudes des Mécanismes Cognitifs</li>
+                    <li><span>Exposant au Manga Café</span> pour la Japan Expo Sud</li>
+                </ul>
+            </div>
+            <div class = "form">
+                <h2>Formations</h2> 
+                <ul>
+                    <li>MASTER Sciences Cognitives spé IHM - Université Lyon 2 Lumière | Mention Bien</li>
+                    <li>LICENCE Psychologie - Université ALLSH | Mention Bien</li> 
+                    <li>En cours : Bachelor IT à La plateforme_</li>
+                    <li>Baccalauréat ES spé Maths | Mention très Bien</li>
+                </ul>
+                      
+            </div>
+
+        </section>
+
+        <section>
+            <div class="skills" >                
+                <h2 class ="opak">Compétences</h2> <!--Alt permet de décrire ce qu'il y a sur l'image du logo, width et height pour génrer la taille des logos dans le CV-->
+                
+                <div>
+                    <img class="skill" id="R_logo" src="images/R_logo.png" alt="Le Logo de R (un R entouré d'un cercle bleu)" /> 
+                    <img  class="skill" id="Pyt_logo" src="images/Python-logo-notext.png" alt="=Logo Python (Deux serpents couchés l'un à côté de l'autre)" /> 
+                </div> <!--j'importe l'image et je resize pour éviter que ça prenne tout mon site-->
+            </div>
+
+                
+            
+        </section>
+        </main>
+       
+            <footer><!--footer pour rentrer un pied de page, le contenu est formaté pour obtenir quelque chose de la forme "élément A" | "élément B"-->
+            <p><a href=https://github.com/ymess31>GitHub</a> | <a href="documents/CV-Yannis-MESSADIA.pdf">Téléchargez mon CV!</a></p>
+            
+        </footer>
+    
+
+
+
+        
+
+    </body>
+</html>
+
+<!-- <ol> (ouvre une liste)
+    <li></li>
+</ol>-->
+
+<!--FONCTIONS UTILISEES JOB 1
+
+<html lang = « »> permet de définir la langue utilisée pour l'élément.
+Pour les éléments non éditables c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables c'est la langue dans laquelle l'utilisateur pourrait écrire.
+
+<p lang= « fr »> Ce paragraphe est défini en français.
+
+Meta charset utf 8 : détermine la façon dont le texte est transmis et stocké. En gros, ça dit que tu utilises un clavier AZERTY.
+
+Meta name viewport
+Meta = défini les métadonnées pour un document HTML. Permet de spécifier des types de données.
+Charset = jeu de caractères ou encodage du doc (notamment accent)
+Name = indique le type de metadonnées. Va de pair avec content, qui va permettre de passer une métadonnée en soit.
+Name peut prendre les attributs suivants = author (la valeur passée à content = nom de l'auteur)
+description (la valeur passée à content pourra être utilisée par les moteurs de recherche comme extrait pour décrire le sujet de la page)
+viewport (la valeur passée à content va nous permettre d'indiquer comment le navigateur doit afficher la page sur différents appareils)-->
